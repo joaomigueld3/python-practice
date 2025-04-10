@@ -28,7 +28,12 @@ def decode_google_doc(url):
     # Grid max size
     max_x = max(data[0] for data in table_data) 
     max_y = max(data[1] for data in table_data)
-
+    
+    """ max_x=0
+    for i,data in range(table_data+1):
+        if data[i] < data[i+1]:
+            max_x = data[i+1] """
+    
     # Dictionary for lookup of characters at x,y
     character_positions = {
     (x, y): char
@@ -57,7 +62,10 @@ def decode_google_doc(url):
      therefore: we must invert rows and columns and invert Y
     """
 
-url2 = "https://docs.google.com/document/d/e/2PACX-1vRMx5YQlZNa3ra8dYYxmv-QIQ3YJe8tbI3kqcuC7lQiZm-CSEznKfN_HYNSpoXcZIV3Y_O3YoUB1ecq/pub"
-url = "https://docs.google.com/document/d/e/2PACX-1vSZ1vDD85PCR1d5QC2XwbXClC1Kuh3a4u0y3VbTvTFQI53erafhUkGot24ulET8ZRqFSzYoi3pLTGwM/pub"
-decode_google_doc(url)
+url = 'https://docs.google.com/document/d/e/2PACX-1vTKcKiZ62gqJ69k8Bt7nyfWZGRNSRvhV7fZi8vChkvpGUxrwcTfILUzOtLwAsuVdvmRqG20S9isWJWS/pub'
+url2 = 'https://docs.google.com/document/d/e/2PACX-1vRozTfXxABZUs20_HDBNX9sclrlnVG2IRktaPVCEhh_x8Hl2R10IsgM8ySQrtKvVLFlC5yjD9Viy9I8/pub'
+decode_google_doc(urlCopy2)
 # Fetch and parse HTML content; extract data from the table; create a dictionary with the data; print the chars while inverting rows and columns, and inverting Y.
+
+
+
