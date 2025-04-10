@@ -64,7 +64,7 @@ def decode_google_doc(url):
 
 url = 'https://docs.google.com/document/d/e/2PACX-1vTKcKiZ62gqJ69k8Bt7nyfWZGRNSRvhV7fZi8vChkvpGUxrwcTfILUzOtLwAsuVdvmRqG20S9isWJWS/pub'
 url2 = 'https://docs.google.com/document/d/e/2PACX-1vRozTfXxABZUs20_HDBNX9sclrlnVG2IRktaPVCEhh_x8Hl2R10IsgM8ySQrtKvVLFlC5yjD9Viy9I8/pub'
-decode_google_doc(urlCopy2)
+decode_google_doc(url2)
 # Fetch and parse HTML content; extract data from the table; create a dictionary with the data; print the chars while inverting rows and columns, and inverting Y.
 
 
